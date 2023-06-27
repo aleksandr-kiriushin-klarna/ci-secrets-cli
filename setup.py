@@ -8,5 +8,10 @@ setup(
     description="Placeholder in public PyPi to shadow internal ci-secrets-cli package",
     url="https://github.com/aleksandr-kiriushin-klarna/ci-secrets-cli",
     packages=find_packages(),
+    entry_points = {
+              'console_scripts': [
+                  'ci-secrets-cli = ci_secrets_cli.cli:cli',
+              ],
+    },
     python_requires='>=3.8',
 )
